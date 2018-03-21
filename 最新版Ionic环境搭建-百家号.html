@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)http://baijiahao.baidu.com/builder/preview/s?id=1595444184491521547&from=timeline -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style><meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-status-bar-style" content="white"><meta name="apple-mobile-web-app-capable" content="no"><link rel="shortcut icon" href="http://www.baidu.com/favicon.ico?t=20171027" type="image/x-icon"><link rel="icon" sizes="any" mask="" href="http://www.baidu.com/img/baidu.svg"><style type="text/css">.commentEmbed-footer {display: none;}/*#pageWrapper .footer {margin: 14px 16px 14px 16px !important;}*/</style><title>
+最新版Ionic环境搭建-百家号</title>
+<script async="" src="./最新版Ionic环境搭建-百家号_files/element.min.js.下载"></script><script async="" src="./最新版Ionic环境搭建-百家号_files/monkey.mobile.min.js.下载"></script><script async="" src="./最新版Ionic环境搭建-百家号_files/speed.min.js.下载"></script><script async="" src="./最新版Ionic环境搭建-百家号_files/dp.mobile.min.js.下载"></script><script src="./最新版Ionic环境搭建-百家号_files/hm.js.下载"></script><script async="" src="./最新版Ionic环境搭建-百家号_files/alog.mobile.min.js.下载"></script><script class="mth-dplog" data-msg=" /* DP统计配置需要统计的模块，以及整体的抽样率，不需要的模块不配置即可 */">window.alogObjectConfig = {sample: '1',product: '718',page: 'bjh_666',monkey_page: '',speed_page: '',speed: {sample: '1'},monkey: {sample: '1'},exception: {sample: '1'},feature: {sample: '0'},cus: {sample: '1'},csp: {sample: '0',}};void function(a,b,c,d,e,f,g){if(a.alogObjectName=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=a[e].l||Date.now(),"https:"===a.location.protocol){if(d="https://gss2.bdstatic.com/70cFsjip0QIZ8tyhnq"+d,!a.alogObjectConfig||!a.alogObjectConfig.sample)return}else d="http://img.baidu.com"+d;var h=!0;if(a.alogObjectConfig&&a.alogObjectConfig.sample){var i=Math.random();a.alogObjectConfig.rand=i,i>a.alogObjectConfig.sample&&(h=!1)}h&&(f=b.createElement(c),f.async=!0,f.src=d,g=b.getElementsByTagName(c)[0],g.parentNode.insertBefore(f,g))}(window,document,"script","/hunter/alog/alog.mobile.min.js","alog"),void function(){function a(){}window.PDC={mark:function(a,b){alog("speed.set",a,b||Date.now()),alog.fire&&alog.fire("mark")},init:function(a){alog("speed.set","options",a)},view_start:a,tti:a,page_ready:a}}();void function(n){var o=!1;n.onerror=function(n,e,t,c){var i=!0;return!e&&/^script error/i.test(n)&&(o?i=!1:o=!0),i&&alog("exception.send","exception",{msg:n,js:e,ln:t,col:c}),!1},alog("exception.on","catch",function(n){alog("exception.send","exception",{msg:n.msg,js:n.path,ln:n.ln,method:n.method,flag:"catch"})})}(window);</script><script>window.MP = {};window.MP.globalConf = {isLogin: '1432748919', /* m-utils的follow有用到 */pageInitTime: Date.now()};</script><link rel="stylesheet" type="text/css" href="./最新版Ionic环境搭建-百家号_files/m-content_d095703.css"><link rel="stylesheet" type="text/css" href="./最新版Ionic环境搭建-百家号_files/video-js_713d564.css"><link rel="stylesheet" type="text/css" href="./最新版Ionic环境搭建-百家号_files/APlayer_887f796.css"><style type="text/css">.aplayer-narrow {
+  width: 66px; }
+  .aplayer-narrow .aplayer-info {
+    display: none; }
+
+.aplayer-withlrc.aplayer-narrow {
+  width: 90px; }
+
+.aplayer-withlrc.aplayer .aplayer-pic {
+  height: 90px;
+  width: 90px; }
+
+.aplayer-withlrc.aplayer .aplayer-info {
+  margin-left: 90px;
+  height: 90px; }
+
+.aplayer-withlrc.aplayer .aplayer-lrc {
+  display: block; }
+
+.aplayer-withlrc.aplayer .aplayer-info {
+  padding: 10px 7px 0 7px; }
+
+.aplayer-withlist.aplayer .aplayer-info {
+  border-bottom: 1px solid #e9e9e9; }
+
+.aplayer-withlist.aplayer .aplayer-list {
+  display: block; }
+
+.aplayer-withlist.aplayer .aplayer-icon-menu {
+  display: inline !important; }
+
+.aplayer {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  line-height: initial; }
+  .aplayer * {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box; }
+  .aplayer .aplayer-icon {
+    width: 15px;
+    height: 15px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    opacity: .8;
+    vertical-align: middle;
+    padding: 0;
+    font-size: 12px;
+    margin: 0;
+    display: inline; }
+    .aplayer .aplayer-icon .aplayer-fill {
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out; }
+  .aplayer .aplayer-lrc-content {
+    display: none; }
+  .aplayer .aplayer-pic {
+    position: relative;
+    float: left;
+    height: 66px;
+    width: 66px;
+    background-image: url(data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAeAAD/4QMfaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzA2NyA3OS4xNTc3NDcsIDIwMTUvMDMvMzAtMjM6NDA6NDIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjE2NjQ3NUZBM0Y4RDExRTY4NzJCRDdCNkZCQTQ0MjNBIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjE2NjQ3NUY5M0Y4RDExRTY4NzJCRDdCNkZCQTQ0MjNBIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSI5OENEMEFFRjM0NTI1NjE0NEREQkU4RjkxRjAwNjM3NiIgc3RSZWY6ZG9jdW1lbnRJRD0iOThDRDBBRUYzNDUyNTYxNDREREJFOEY5MUYwMDYzNzYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAAQCwsLDAsQDAwQFw8NDxcbFBAQFBsfFxcXFxcfHhca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);
+    background-size: 100%;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .aplayer .aplayer-pic .aplayer-button {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.8;
+      cursor: pointer;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+              box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.2);
+      -webkit-transition: all 0.1s ease;
+      transition: all 0.1s ease; }
+      .aplayer .aplayer-pic .aplayer-button:hover {
+        opacity: 1; }
+      .aplayer .aplayer-pic .aplayer-button .aplayer-fill {
+        fill: #fff; }
+    .aplayer .aplayer-pic .aplayer-hide {
+      display: none; }
+    .aplayer .aplayer-pic .aplayer-play {
+      width: 26px;
+      height: 26px;
+      border: 2px solid #fff;
+      bottom: 50%;
+      right: 50%;
+      margin: 0 -15px -15px 0; }
+      .aplayer .aplayer-pic .aplayer-play .aplayer-icon-play {
+        position: absolute;
+        top: 3px;
+        left: 4px;
+        height: 20px;
+        width: 20px; }
+    .aplayer .aplayer-pic .aplayer-pause {
+      width: 16px;
+      height: 16px;
+      border: 2px solid #fff;
+      bottom: 4px;
+      right: 4px; }
+      .aplayer .aplayer-pic .aplayer-pause .aplayer-icon-pause {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        height: 12px;
+        width: 12px; }
+  .aplayer .aplayer-info {
+    margin-left: 66px;
+    padding: 14px 7px 0 10px;
+    height: 66px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    .aplayer .aplayer-info .aplayer-music {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin: 0 0 13px 5px;
+      -webkit-user-select: text;
+         -moz-user-select: text;
+          -ms-user-select: text;
+              user-select: text;
+      cursor: default;
+      padding-bottom: 2px; }
+      .aplayer .aplayer-info .aplayer-music .aplayer-title {
+        font-size: 14px; }
+      .aplayer .aplayer-info .aplayer-music .aplayer-author {
+        font-size: 12px;
+        color: #666; }
+    .aplayer .aplayer-info .aplayer-controller {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap {
+        margin: 0 0 0 5px;
+        padding: 4px 0;
+        cursor: pointer !important;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1; }
+        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {
+          position: relative;
+          height: 2px;
+          width: 100%;
+          background: #cdcdcd; }
+          .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: #aaa;
+            height: 2px;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease; }
+          .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            height: 2px; }
+            .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb {
+              position: absolute;
+              top: 0;
+              right: 5px;
+              margin-top: -4px;
+              margin-right: -10px;
+              height: 8px;
+              width: 8px;
+              border-radius: 50%;
+              background: #fff;
+              cursor: pointer !important; }
+      .aplayer .aplayer-info .aplayer-controller .aplayer-time {
+        position: relative;
+        right: 0;
+        bottom: 3px;
+        height: 17px;
+        color: #999;
+        font-size: 11px;
+        padding-left: 7px; }
+        .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-time-inner {
+          vertical-align: middle; }
+        .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon {
+          cursor: pointer;
+          -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease; }
+          .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon .aplayer-fill {
+            fill: #666; }
+          .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon.aplayer-icon-mode {
+            margin-right: 4px; }
+          .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon:hover .aplayer-fill {
+            fill: #000; }
+          .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon.aplayer-icon-menu {
+            display: none; }
+        .aplayer .aplayer-info .aplayer-controller .aplayer-time.aplayer-time-narrow .aplayer-icon-mode {
+          display: none; }
+        .aplayer .aplayer-info .aplayer-controller .aplayer-time.aplayer-time-narrow .aplayer-icon-menu {
+          display: none; }
+      .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap {
+        position: relative;
+        display: inline-block;
+        margin-left: 3px;
+        cursor: pointer !important; }
+        .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap:hover .aplayer-volume-bar-wrap {
+          display: block; }
+        .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap .aplayer-volume-bar-wrap {
+          display: none;
+          position: absolute;
+          bottom: 15px;
+          right: -3px;
+          width: 25px;
+          height: 40px;
+          z-index: 99; }
+          .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap .aplayer-volume-bar-wrap .aplayer-volume-bar {
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            width: 5px;
+            height: 35px;
+            background: #aaa; }
+            .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap .aplayer-volume-bar-wrap .aplayer-volume-bar .aplayer-volume {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              width: 5px;
+              -webkit-transition: all 0.1s ease;
+              transition: all 0.1s ease; }
+  .aplayer .aplayer-lrc {
+    display: none;
+    position: relative;
+    height: 30px;
+    text-align: center;
+    overflow: hidden;
+    margin: -10px 0 7px; }
+    .aplayer .aplayer-lrc:before {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      display: block;
+      overflow: hidden;
+      width: 100%;
+      height: 10%;
+      content: ' ';
+      background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0)));
+      background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); }
+    .aplayer .aplayer-lrc:after {
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      display: block;
+      overflow: hidden;
+      width: 100%;
+      height: 33%;
+      content: ' ';
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.8)));
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ccffffff',GradientType=0 ); }
+    .aplayer .aplayer-lrc p {
+      font-size: 12px;
+      color: #666;
+      line-height: 16px !important;
+      height: 16px !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      -webkit-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out;
+      opacity: 0.4;
+      overflow: hidden; }
+      .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        opacity: 1;
+        overflow: visible;
+        height: initial !important; }
+    .aplayer .aplayer-lrc .aplayer-lrc-contents {
+      width: 100%;
+      -webkit-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out;
+      -webkit-user-select: text;
+         -moz-user-select: text;
+          -ms-user-select: text;
+              user-select: text;
+      cursor: default; }
+  .aplayer .aplayer-list {
+    overflow: auto;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    will-change: height;
+    display: none; }
+    .aplayer .aplayer-list.aplayer-list-hide {
+      height: 0 !important; }
+    .aplayer .aplayer-list::-webkit-scrollbar {
+      width: 5px; }
+    .aplayer .aplayer-list::-webkit-scrollbar-track {
+      background-color: #f9f9f9; }
+    .aplayer .aplayer-list::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background-color: #eee; }
+    .aplayer .aplayer-list::-webkit-scrollbar-thumb:hover {
+      background-color: #ccc; }
+    .aplayer .aplayer-list ol {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      .aplayer .aplayer-list ol li {
+        position: relative;
+        height: 32px;
+        line-height: 32px;
+        padding: 0 15px;
+        font-size: 12px;
+        border-top: 1px solid #e9e9e9;
+        cursor: pointer;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        overflow: hidden; }
+        .aplayer .aplayer-list ol li:first-child {
+          border-top: none; }
+        .aplayer .aplayer-list ol li:hover {
+          background: #efefef; }
+        .aplayer .aplayer-list ol li.aplayer-list-light {
+          background: #e9e9e9; }
+          .aplayer .aplayer-list ol li.aplayer-list-light .aplayer-list-cur {
+            display: inline-block; }
+        .aplayer .aplayer-list ol li .aplayer-list-cur {
+          display: none;
+          width: 3px;
+          height: 22px;
+          position: absolute;
+          left: 0;
+          top: 5px;
+          cursor: pointer; }
+        .aplayer .aplayer-list ol li .aplayer-list-index {
+          color: #666;
+          margin-right: 12px;
+          cursor: pointer; }
+        .aplayer .aplayer-list ol li .aplayer-list-author {
+          color: #666;
+          float: right;
+          cursor: pointer; }
+
+@-webkit-keyframes aplayer-roll {
+  0% {
+    left: 0; }
+  100% {
+    left: -100%; } }
+
+@keyframes aplayer-roll {
+  0% {
+    left: 0; }
+  100% {
+    left: -100%; } }
+</style></head><body class=" "><script class="mth-dplog" data-msg="白屏时间">alog('speed.set', 'ht', Date.now());</script><div id="qrcode" title="http://baijiahao.baidu.com/builder/preview/s?id=1595444184491521547&amp;from=timeline" style="display: block;"><canvas width="256" height="256" style="display: none;"></canvas><img style="display: block;" src="data:image/png;base64,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"><p>手机扫描二维码</p><p>阅读体验更佳</p></div><div id="pageWrapper">
+<input id="pid-text" type="hidden" value="1024">
+<h1 class="mth-config" data-appid="1595435813006496" data-isbox=""></h1>
+<h1 class="mth-header" data-appid="1595435813006496" data-id="1595444184491521547" data-isbox="">最新版Ionic环境搭建</h1>
+<h3 class="mth-extra-info">
+<a href="http://baijiahao.baidu.com/u?app_id=1595435813006496&amp;fr=bjharticle" class="author haftpxbox trblBor mth-pblog" data-bdlog="news_author">
+<div class="author-level
+                    ">
+<img src="./最新版Ionic环境搭建-百家号_files/timg" alt="">
+</div>
+</a>
+<div class="detail">
+<div class="name">
+<a href="http://baijiahao.baidu.com/u?app_id=1595435813006496&amp;fr=bjharticle">大象说编程</a>
+</div>
+<div class="info">
+<span class="year">2018-03-20</span>18:47
+</div>
+</div>
+</h3>
+<div class="mth-editor-content" data-coverimage="http://timg01.bdimg.com/timg?pacompress&amp;imgtype=0&amp;sec=1439619614&amp;autorotate=1&amp;di=9802b4b55d00877f9ef4a7baa2f84951&amp;quality=90&amp;size=b333_10017&amp;cut_x=121&amp;cut_y=0&amp;cut_w=333&amp;cut_h=223&amp;src=http%3A%2F%2Ftimg01.bdimg.com%2Ftimg%3Fpacompress%26imgtype%3D0%26sec%3D1439619614%26autorotate%3D1%26di%3D6db7800aaad2fafdf1b75a22f1926518%26quality%3D90%26size%3Db870_10000%26src%3Dhttp%253A%252F%252Fpic.rmb.bdstatic.com%252F15215339528067d86b640ec94c23ad3ed7c69cc443.png">
+<p><br></p><p data-bjh-caption-id="cap-92522963"><img src="./最新版Ionic环境搭建-百家号_files/timg(1)" data-w="575" data-h="223" alt="" top="-772" status="wait"></p><p><br></p><p>由于最近开始学习Ionic，发现网上的环境搭建都是好几年前的，按照上面的方法搭建都不成功，折腾了好几天才把环境搭建成功，可以编译APK包，下面把搭建的过程以及工具包都分享出来。注：所有的工具包都是Windows 7 64位的，如果需要32位的或其他版本的话可以私聊我。</p><p><strong>所用的工具包的地址：链接: https://pan.baidu.com/s/1VXWc8dqTcU_x6JALZCv_LQ 密码: r6xx</strong></p><p>第一步：安装python，这个一定要安装，由于刚开始没有安装，后来生成项目的时候会失败。运行python-3.6.4.exe这个程序。安装比较简单，只要双击一直点击下一步就可以了。</p><p>第二步：安装nodejs，运行node-v9.8.0-x64.msi这个程序。也是一直点击安装成功即可。在命令提示符下运行：node -v来查看版本号。</p><p><br></p><p data-bjh-caption-id="cap-33428041" data-bjh-caption-text=" "><img src="./最新版Ionic环境搭建-百家号_files/timg(2)" data-w="276" data-h="116" alt="" top="-75" status="wait"></p><p class="bjh-image-caption ue_t" data-bjh-caption-length="18" data-bjh-caption-text="" data-bjh-caption-for="cap-33428041"><span style="color: rgb(51, 51, 51);"> </span></p><p>注：在安装nodejs的同时也会安装npm工具，在命令提示符下查看npm的版本。</p><p><br></p><p data-bjh-caption-id="cap-78549822" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(3)" data-w="246" data-h="80" alt="" top="145" status="wait"></p><p>第三步：配置npm的地址，由于国内网络的原因，npm如果用国外的网址访问github会比较慢，可以配置淘宝的地址来访问，速度会快很多。打开nodejs的安装目录，找到node_modules文件夹下的npm文件夹，再向下找到npmrc这个文件，我的目录地址为：“C:\Program Files\nodejs\node_modules\npm\npmrc”用记事本打开该文件，在下面添上这句：registry = https://registry.npm.taobao.org，如下图所示：</p><p data-bjh-caption-id="cap-87153666" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(4)" data-w="364" data-h="108" alt="" top="401" status="wait"></p><p>第四步，第五步，第六步为编辑安卓APK需要的环境，如果不需要安卓开发环境的话，可以忽略。</p><p>第四步：安装java，运行jdk-8u161-windows-x64.exe这个程序，一直下一步安装就可以，安装完后不需要配置java的环境变量，安装程序已经配置好了，在命令提示符下查看java版本。</p><p data-bjh-caption-id="cap-69346972" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(5)" data-w="560" data-h="121" alt="" top="701" status="wait"></p><p>第五步：安装android sdk，运行installer_r24.4.1-windows.exe程序，一直下一步安装成功，我的是安装在C:\Users\Administrator\AppData\Local\Android\android-sdk目录下了。打开该目录，双击SDK Manager.exe这个程序。接下来我把要选择安装的包截图给你。</p><p data-bjh-caption-id="cap-37920563"><img src="./最新版Ionic环境搭建-百家号_files/timg(6)" data-w="535" data-h="187" alt="" top="970" status="wait"></p><p data-bjh-caption-id="cap-42932555"><img src="./最新版Ionic环境搭建-百家号_files/timg(7)" data-w="708" data-h="282" alt="" top="1181" status="wait"></p><p data-bjh-caption-id="cap-96410834" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(8)" data-w="603" data-h="309" alt="" top="1486" status="wait"></p><p>只需要<span class="" data-origin-sentence="%E5%8F%AA%E9%9C%80%E8%A6%81%E8%A3%85%E8%BF%99%E5%87%A0%E4%B8%AA%E5%8C%85%E5%B0%B1%E5%8F%AF%E4%BB%A5%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%EF%BC%8C%E7%8E%B0%E5%9C%A8%E8%BF%99%E4%BA%9B%E9%83%BD%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E6%88%90%E5%8A%9F" data-target-sentence="%E5%8F%AA%E9%9C%80%E8%A6%81%E8%A3%85%E7%9D%80%E5%87%A0%E4%B8%AA%E5%8C%85%E5%B0%B1%E5%8F%AF%E4%BB%A5%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%EF%BC%8C%E7%8E%B0%E5%9C%A8%E8%BF%99%E4%BA%9B%E9%83%BD%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E6%88%90%E5%8A%9F">装这</span>几个包就可以，不需要设置代理，现在这些都可以直接下载成功。</p><p>然后需要配置一下环境变量，</p><p>ANDROID_HOME=C:\Users\Administrator\AppData\Local\Android\android-sdk</p><p>在Path变量后面增加如下文字：%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools;</p><p data-bjh-caption-id="cap-65543617"><img src="./最新版Ionic环境搭建-百家号_files/timg(9)" data-w="340" data-h="256" alt="" top="2020" status="wait"></p><p data-bjh-caption-id="cap-61721294" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(10)" data-w="349" data-h="138" alt="" top="2299" status="wait"></p><p>第六步：安卓的编译还离不开gradle，于是把gradle-4.6-all.zip这个文件解压放到和安卓SDK的同级目录下，如我的目录为：C:\Users\Administrator\AppData\Local\Android\gradle-4.6，目录结构如下图所示：</p><p data-bjh-caption-id="cap-1392627" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(11)" data-w="704" data-h="332" alt="" top="2559" status="wait"></p><p>然后需要配置环境变量</p><p>GRADLE_HOME=C:\Users\Administrator\AppData\Local\Android\gradle-4.6</p><p>Path变量后面需要增加%GRADLE_HOME%\bin\;</p><p data-bjh-caption-id="cap-4889349"><img src="./最新版Ionic环境搭建-百家号_files/timg(12)" data-w="424" data-h="269" alt="" top="3045" status="wait"></p><p data-bjh-caption-id="cap-45805091" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(13)" data-w="343" data-h="132" alt="" top="3338" status="wait"></p><p>第七步：安装ionic和cordova，只需要在命令提示符下运行npm i -g cordova ionic</p><p data-bjh-caption-id="cap-88467865" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(14)" data-w="634" data-h="46" alt="" top="3537" status="wait"></p><p>这样就是正在安装，需要等三到五分钟左右。安装成功后，查看ionic和cordova的版本。</p><p data-bjh-caption-id="cap-68106284" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(15)" data-w="337" data-h="134" alt="" top="3651" status="wait"></p><p>都是比较新的版本。接下来就可以用ionic创建项目了。</p><p><br></p><p>第八步：创建项目，比如我想在D盘code文件夹下创建项目，于是我要先来到code目录，然后运行ionic start myApp tabs</p><p data-bjh-caption-id="cap-11363653" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(16)" data-w="648" data-h="199" alt="" top="3966" status="wait"></p><p>在这个时候需要输一个字母y按回车</p><p><br></p><p data-bjh-caption-id="cap-30364380" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(17)" data-w="629" data-h="404" alt="" top="4276" status="wait"></p><p>接下来需要等待大概四五分钟的时间，会在d盘code文件夹下创建myApp的文件夹。</p><p data-bjh-caption-id="cap-34520408" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(18)" data-w="532" data-h="398" alt="" top="4748" status="wait"></p><p class="bjh-image-caption ue_t" data-bjh-caption-length="18" data-bjh-caption-text="" data-bjh-caption-for="cap-34520408"><br></p><p>到了这一步会询问你是否要安装Ionic Pro SDK，直接输入n按回车即可。此时项目创建成功。</p><p>第九步：运行Ionic，在浏览器中显示。进入myApp目录，运行ionic serve。</p><p data-bjh-caption-id="cap-32258145" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(19)" data-w="605" data-h="544" alt="" top="5321" status="wait"></p><p>在浏览器中输入http://localhost:8100/ 即可浏览项目。</p><p>第十步：添加android平台，运行ionic cordova platform add android命令</p><p data-bjh-caption-id="cap-49144786" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(20)" data-w="644" data-h="405" alt="" top="5976" status="wait"></p><p>等个四五分钟左右提示命令成功即可。</p><p data-bjh-caption-id="cap-67765098" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(21)" data-w="637" data-h="372" alt="" top="6448" status="wait"></p><p>这样即表示添加平台成功。注意上面的android@~7.0.0了吗，这就是我们安装安卓SDK的版本要求。</p><p>第十一步：编译成APK文件。运行ionic cordova build android命令</p><p data-bjh-caption-id="cap-29971603" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(22)" data-w="645" data-h="556" alt="" top="6958" status="wait"></p><p>一直到打包成功，会提示APK在哪个文件夹下。如下图所示：</p><p data-bjh-caption-id="cap-99119685" data-bjh-caption-text=""><img src="./最新版Ionic环境搭建-百家号_files/timg(23)" data-w="672" data-h="480" alt="" top="7581" status="wait"></p><p>至此，关于Ionic的环境搭建基本上都讲完了，这个都是基于2018年3月20日的最新版本，如果你在搭建的过程中有问题的话，欢迎交流咨询。</p><p>如果觉得写的不错，多多分享，您的支持是我一直努力的动力！</p><p><br></p>
+</div>
+<script>var lazyLoad=function(){var t=window.innerHeight,e=document.getElementsByClassName("mth-editor-content")[0].getBoundingClientRect().width,s=document.getElementsByClassName("mth-editor-content")[0].getElementsByTagName("img"),i={setImg:function(){for(var t=[],i="",o="",n=0,r=0,u=0,a=s.length;a>u;u++)t=s[u],i=t.getAttribute("src"),o=t.getAttribute("data-src"),n=t.getAttribute("data-w"),r=t.getAttribute("data-h"),o&&n>=e?(t.setAttribute("width",e),t.setAttribute("height",r/n*e)):o&&(t.setAttribute("width",e),t.setAttribute("height",r)),t.setAttribute("alt",""),o&&!i&&(t.className="img-lazy")},setOffsetTop:function(){for(var e=[],i="",o=0,n=0,r=s.length;r>n;n++)!function(){if(e=s[n],i=e.getAttribute("data-src"),"done"!==e.getAttribute("status")){o=e.offsetTop-t,e.setAttribute("top",o),e.setAttribute("status","wait");var r=document.documentElement.scrollTop||window.pageYOffset||document.body.scrollTop;if(r+520>=o&&i&&i){var u=new Image;u.src=i,u.onload=function(){e.setAttribute("width",""),e.setAttribute("height",""),e.className="",u=null}(e),e.setAttribute("src",i),e.setAttribute("status","done")}}}(s[n])},isShow:function(){for(var e=document.documentElement.scrollTop||window.pageYOffset||document.body.scrollTop,i=[],o="",n=0,r=0,u=s.length;u>r;r++)!function(){if(i=s[r],o=i.getAttribute("data-src"),"done"!==i.getAttribute("status")&&(n=i.offsetTop-t,i.setAttribute("top",n),i.setAttribute("status","wait"),e+1480>=n&&o&&o)){var u=new Image;u.src=o,u.onload=function(){i.setAttribute("width",""),i.setAttribute("height",""),i.className="",u=null}(i),i.setAttribute("src",o),i.setAttribute("status","done")}}(r)},scroll:function(){window.onscroll=function(){i.isShow()}}},o=function(){i.setImg(),i.setOffsetTop(),i.scroll()};return{init:o,methods:i}}();lazyLoad.init();</script>
+<div id="boxShare"></div>
+<div id="author-con"></div>
+<script id="script-author" type="text/template">
+        <section class="mth-author-info">
+            <a  href="/u?app_id=<% this.author.id %>&fr=bjhuser" class="author haftpxbox trblBor"  data-bdlog="news_author">
+                <div class="author-level
+                    <% if (this.author.level == '3') { %>
+                        <%if (this.author.type == 'individual') { %>
+                            author-level-individual
+                        <% } else if (this.author.type == 'organization') { %>
+                            author-level-organization
+                        <% }%>
+                    <% } %>">
+                    <img src="//bjh.bdstatic.com/bjh/content/static/mobile/img/lazyload-author_828f61c.png" data-original="<% this.author.avatar %>"  class="lazyload-imgs" alt="">
+                </div>
+            </a>
+            <div class="detail">
+                <div class="name">
+                    <a href="/u?app_id=<% this.author.id %>&fr=bjhuser"><% this.author.name %></a>
+                </div>
+                <div class="date"><% this.author.wishes %></div>
+            </div>
+        </section>
+    </script>
+<div id="recent-con"></div>
+<script id="script-recent" type="text/template">
+        <section class="mth-cards">
+            <div class="c-title haftpxbox bBor">
+                <span class="c-title-inner haftpxbox bBor">作者近期文章</span>
+            </div>
+            <ul class="c-news-text" id="mth-recent">
+                <% var length = (this.recent.length < 4) ? this.recent.length : 3;%>
+                <% for (var i = 0; i < length; i++) { %>
+                    <li class="cnt-list haftpxbox bBor mth-list-count">
+                        <a href="/s?id=<% this.recent[i].id %>&fr=bjhrecent&type=<% this.recent[i].type %>" class="typeText inRecent"><% this.recent[i].title %></a>
+                    </li>
+                <% } %>
+            </ul>
+                <%if (this.isBox) { %>
+            <div class="mth-get-more haftpxbox tBor" <%if (3 < this.count) { %> style="display:block" <% } %>>
+                    <a href="/u?app_id=<% this.app.id %>&fr=bjhrecent" data-bdlog="news_more_news" class="mth-pblog">
+                        <div class="recent-more">
+                            查看更多文章
+                        </div>
+                    </a>
+                <% } else { %>
+            <div class="mth-get-more haftpxbox tBor mth-get-more-openBox" <%if (3 < this.count) { %> style="display:block" <% } %>>
+                                        <a href="javascript:void(0);" data-bdlog="news_more_news" class="mth-pblog mth-open-box">
+                        <div class="recent-more-openBox haftpxbox trblBor" data-url="/u?app_id=<% this.app.id %>&fr=bjhrecent_shareback">
+                            打开手机百度,查看更多文章
+                        </div>
+                    </a>
+                                    <% } %>
+            </div>
+        </section>
+    </script>
+<div id="interest-con"></div>
+<script id="script-interest" type="text/template">
+        <section class="mth-cards">
+            <div class="c-title haftpxbox bBor">
+                <span class="c-title-inner haftpxbox bBor">猜你喜欢</span>
+            </div>
+            <ul class="c-news-text haftpxbox bBor" id="mth-interest">
+                <% var imageData = ''; %>
+                <% var pvTemp = 0; %>
+                <% var length = (this.interest.length < 5) ? this.interest.length : 5;%>
+                <% for (var i = 0; i < length; i++) { %>
+                    <li class="cnt-list haftpxbox bBor mth-list-count">
+                    <% if (this.interest[i].cover_images && (this.interest[i].cover_layout == 'one')) { %>
+                        <i script="<% imageData = JSON.parse(this.interest[i].cover_images) %>" class="tpl-hide"></i>
+                        <% if (imageData.length) { %>
+                            <a href="/s?id=<% this.interest[i].id %>&fr=bjhlike&type=<% this.interest[i].type %>" class="typeNews mth-pblog" data-bdlog="news_interest">
+                                <div class="img">
+                                    <img src="//bjh.bdstatic.com/bjh/content/static/mobile/img/lazyload-img_a4df73e.png" data-original="<% imageData[0].src %>"  class="lazyload-imgs" alt="">
+                                </div>
+                        <% } else { %>
+                            <a href="/s?id=<% this.interest[i].id %>&fr=bjhlike&type=<% this.interest[i].type %>" class="typeText" data-bdlog="news_interest">
+                        <% } %>
+                    <% } else { %>
+                        <a href="/s?id=<% this.interest[i].id %>&fr=bjhlike&type=<% this.interest[i].type %>" class="typeText" data-bdlog="news_interest">
+                    <% } %>
+                            <div class="text">
+                                <h2><% this.interest[i].title %></h2>
+                                <% if (this.interest[i].cover_images && (this.interest[i].cover_layout == 'three')) { %>
+                                    <i script="<% imageData = JSON.parse(this.interest[i].cover_images) %>" class="tpl-hide"></i>
+                                    <% if (imageData.length) { %>
+                                        <div class="three-img">
+                                            <div>
+                                                <img src="//bjh.bdstatic.com/bjh/content/static/mobile/img/lazyload-img_a4df73e.png" data-original="<% imageData[0].src %>" class="lazyload-imgs" alt="">
+                                            </div>
+                                            <div>
+                                                <img src="//bjh.bdstatic.com/bjh/content/static/mobile/img/lazyload-img_a4df73e.png" data-original="<% imageData[1].src %>" class="lazyload-imgs" alt="">
+                                            </div>
+                                            <div>
+                                                <img src="//bjh.bdstatic.com/bjh/content/static/mobile/img/lazyload-img_a4df73e.png" data-original="<% imageData[2].src %>" class="lazyload-imgs" alt="">
+                                            </div>
+                                        </div>
+                                    <% } %>
+                                <% } %>
+                                <div class="text-extra">
+                                    <div class="name"><% this.interest[i].app_name || this.interest[i].source_name %></div>
+                                    <i script="<% pvTemp = window.mUtils.numFormat(this.interest[i].read_amount) %>" class="tpl-hide"></i>
+                                    <div class="pv"><% pvTemp %>阅读</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                <% } %>
+            </ul>
+        </section>
+    </script>
+<div id="hotNews-con"></div>
+<script id="script-hotNews" type="text/template">
+        <section class="mth-cards">
+            <div class="c-title haftpxbox bBor">
+                <span class="c-title-inner haftpxbox bBor">热门文章</span>
+            </div>
+            <ul class="c-news-text" id="mth-hot-news">
+                <% var length = (this.hotNews.length < 5) ? this.hotNews.length : 5;%>
+                <% var pvTemp = 0; %>
+                <% for (var i = 0; i < length; i++) {  %>
+                    <li class="cnt-list haftpxbox bBor mth-list-count">
+                        <a href="/s?id=<% this.hotNews[i].id %>&fr=bjhhot&type=<% this.hotNews[i].type %>" class="typeText mth-pblog" data-bdlog="news_hot_article">
+                            <div class="text">
+                                <h2><% this.hotNews[i].title%></h2>
+                                <div class="text-extra">
+                                    <div class="name"><% this.hotNews[i].app_name || this.hotNews[i].source_name %></div>
+                                    <i script="<% pvTemp = window.mUtils.numFormat(this.hotNews[i].read_amount) %>" class="tpl-hide"></i>
+                                    <% if (this.hotNews[i].type == 'news') { %>
+                                        <div class="pv"><% pvTemp %>阅读</div>
+                                    <% } else { %>
+                                        <div class="pv"><% pvTemp %>播放</div>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </a>
+                   </li>
+                <% } %>
+            </ul>
+        </section>
+    </script>
+<div id="hotAuthor-con"></div>
+<script id="script-hotAuthor" type="text/template">
+        <section class="mth-cards">
+            <div class="c-title haftpxbox bBor">
+                <span class="c-title-inner haftpxbox bBor">热门作者</span>
+            </div>
+            <ul class="c-news-text" id="mth-hot-author">
+                <% var length = (this.hotAuthor.length < 4) ? this.hotAuthor.length : 4;%>
+                <% var author = ''; %>
+                <% var article_count = 0; %>
+                <% var view_count = 0; %>
+                <% for (var i = 0; i < length; i++) { %>
+                    <li class="haftpxbox bBor mth-list-count ">
+                        <div class="mth-hot-authors">
+                            <a  href="/u?app_id=<% this.hotAuthor[i].id %>&fr=bjhhotauthor" class="author haftpxbox trblBor mth-pblog"  data-bdlog="news_hot_author">
+                               <div class="author-level
+                                    <% if (this.hotAuthor[i].level == '3') { %>
+                                        <%if (this.hotAuthor[i].type == 'individual') { %>
+                                            author-level-individual
+                                        <% } else if (this.hotAuthor[i].type == 'organization') { %>
+                                            author-level-organization
+                                        <% }%>
+                                    <% } %>">
+                                   <img src="//bjh.bdstatic.com/bjh/content/static/mobile/img/lazyload-author_828f61c.png" data-original="<% this.hotAuthor[i].avatar%>"  class="lazyload-imgs" alt="">
+                               </div>
+                            </a>
+                            <div class="detail">
+                                <a href="/u?app_id=<% this.hotAuthor[i].id%>&fr=bjhhotauthor" class="author-level
+                                    <% if (this.hotAuthor[i].level == '3') { %>
+                                        <% this.hotAuthor[i].type%>
+                                    <% } %>">
+                                    <div class="name">
+                                        <% this.hotAuthor[i].name %>
+                                    </div>
+                                    <div class="info">
+                                       <i script="<% article_count = window.mUtils.numFormat(this.hotAuthor[i].article_count) || 0 %>" class="tpl-hide"></i>
+                                       <span class="article"><% article_count %>文章</span>
+                                       <i script="<% view_count = window.mUtils.numFormat(this.hotAuthor[i].view_count) || 0 %>" class="tpl-hide"></i>
+                                       <span><% view_count %>阅读</span>
+                                    </div>
+                                    <div class="digest"><% this.hotAuthor[i].wishes%></div>
+                                </a>
+                           </div>
+                        </div>
+                   </li>
+               <% } %>
+            </ul>
+        </section>
+    </script>
+<script type="text/javascript">
+        (function () {
+            var src = 'https://hpd.baidu.com/v.gif' + '?ct=11&cst=1&';
+            var array =
+                [
+                    'distribute_channel=4',
+                    'traffic_type=0',
+                    'content_id=1595444184491521547',
+                    'page_type=1',
+                    'CTK=',
+                    'distribute_channel=4',
+                    'content_acc_type=1',
+                    'content_acc_id=',
+                    'isUk=1',
+                    'content_platform_id=3',
+                    'PVID=1',
+                    'time=' + +Date.now()
+                ];
+            src += array.join('&');
+            window.MP.globalConf.wangmengLog = src;
+            window.MP.globalConf.ctk = '';
+        })();
+    </script>
+<div class="loading" style="display: none;"><i></i>加载中...</div>
+<div class="mth-toast"></div>
+<div class="mth-line haftpxbox tBor" id="mth-pc-line"></div>
+
+<div class="footer-wrap"><footer data-blend-widget="footer" class="footer"><h2>版权声明</h2><p>本文仅代表作者观点，不代表百度立场。</p><p>本文系作者授权百家号发表，未经许可，不得转载。</p></footer><div class="footer-logo-wrap"><img class="footer-logo-img" src="./最新版Ionic环境搭建-百家号_files/new-footer-logo_18223f8.png"><div class="footer-logo-content"><p class="content-text">联系我们：baijiahao@baidu.com</p><p class="content-text">百家号独家出品</p></div></div></div><input id="report-user" type="hidden" value="1432748919">
+<input id="report-article-id" type="hidden" value="1595444184491521547">
+
+</div><script class="mth-dplog" data-msg="首屏时间">void function(e,t){for(var n=t.getElementsByTagName("img"),a=Date.now(),i=[],o=function(){this.removeEventListener&&this.removeEventListener("load",o,!1),i.push({img:this,time:Date.now()})},s=0;s< n.length;s++)!function(){var e=n[s];e.addEventListener?!e.complete&&e.addEventListener("load",o,!1):e.attachEvent&&e.attachEvent("onreadystatechange",function(){"complete"==e.readyState&&o.call(e,o)})}();alog("speed.set",{fsItems:i,fs:a})}(window,document);</script><script id="BoxJS" src="./最新版Ionic环境搭建-百家号_files/boxjs.js.下载"></script>
+<script src="./最新版Ionic环境搭建-百家号_files/log.js.下载"></script>
+<script>
+        var ARTICLE_STATUS = 'publish';
+    </script>
+<script type="text/javascript" src="./最新版Ionic环境搭建-百家号_files/lib-content_0096478.js.下载"></script>
+<script type="text/javascript" src="./最新版Ionic环境搭建-百家号_files/qrcode_1dc0697.js.下载"></script>
+<script type="text/javascript" src="./最新版Ionic环境搭建-百家号_files/video.min_2b14286.js.下载"></script>
+<script type="text/javascript" src="./最新版Ionic环境搭建-百家号_files/APlayer.min_5c462ef.js.下载"></script>
+<script type="text/javascript">!function(){    require('mobile:static/mobile/js/widget/m-report').init();
+}();
+!function(){function getQrcode() {var qrcode = new window.QRCode('qrcode');qrcode.makeCode(location.href);var qrcodeText = $('<p>手机扫描二维码</p><p>阅读体验更佳</p>');$('#qrcode').append(qrcodeText);setTimeout(function () {$('#qrcode').show();}, 300);}getQrcode();}();
+!function(){        require('mobile:static/mobile/js/page/m-content').init();
+        // TODO;
+    }();
+!function(){if (location.host.indexOf('baijiahao.baidu.com') !== -1 || location.host.indexOf('bjh.baidu.com') !== -1 || location.host.indexOf('baijiahaos.baidu.com') !== -1) {var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?192fa266ff34772c28e4ddb36b8f4472";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();}}();
+!function(){/* 关注按钮点击态设置 */$(document).on('touchstart', '.follow', function () {$(this).addClass('follow-touched');});$(document).on('touchend', '.follow', function () {$(this).removeClass('follow-touched');});}();
+!function(){/* "mth-dplog" 用户可操作时间*/void function(a,b,c,d,e,f){function g(b){a.attachEvent?a.attachEvent("onload",b,!1):a.addEventListener&&a.addEventListener("load",b)}function h(a,c,d){d=d||15;var e=new Date;e.setTime((new Date).getTime()+1e3*d),b.cookie=a+"="+escape(c)+";path=/;expires="+e.toGMTString()}function i(a){var c=b.cookie.match(new RegExp("(^| )"+a+"=([^;]*)(;|$)"));return null!=c?unescape(c[2]):null}function j(){var a=i("PMS_JT");if(a){h("PMS_JT","",-1);try{a=a.match(/{["']s["']:(\d+),["']r["']:["']([\s\S]+)["']}/),a=a&&a[1]&&a[2]?{s:parseInt(a[1]),r:a[2]}:{}}catch(c){a={}}a.r&&b.referrer.replace(/#.*/,"")!=a.r||alog("speed.set","wt",a.s)}}if(a.alogObjectConfig){var k=a.alogObjectConfig.sample,l=a.alogObjectConfig.rand;if("https:"===a.location.protocol){if(d="https://gss2.bdstatic.com/70cFsjip0QIZ8tyhnq"+d,!k||!l)return}else d="http://img.baidu.com"+d;k&&l&&l>k||(g(function(){alog("speed.set","lt",Date.now()),e=b.createElement(c),e.async=!0,e.src=d+"?v="+~(new Date/864e5),f=b.getElementsByTagName(c)[0],f.parentNode.insertBefore(e,f)}),j())}}(window,document,"script","/hunter/alog/dp.mobile.min.js");alog('speed.set', 'drt', Date.now());}();
+!function(){/* 更新h5统计方法 */}();</script>
+<!--23155213230748171274032113-->
+<script> var _trace_page_logid = 2315521323; </script></body></html>
